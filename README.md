@@ -2,7 +2,7 @@
 
 **OpenFlix** is a professional-grade, open-source streaming platform that allows users to discover and watch Movies, TV Shows, and Anime for free. Built with a modern tech stack and a premium "Deep Space" design system, it serves as a robust alternative to paid streaming services.
 
-![OpenFlix Logo](src/assets/logo.png)
+<img src="src/assets/logo.png" width="250" alt="OpenFlix Logo">
 
 ## 🚀 Features
 
