@@ -1,68 +1,76 @@
+# OpenFlix 🎬
 
-# NETFLIX KE PITAJI
+**OpenFlix** is a professional-grade, open-source streaming platform that allows users to discover and watch Movies, TV Shows, and Anime for free. Built with a modern tech stack and a premium "Deep Space" design system, it serves as a robust alternative to paid streaming services.
 
+![OpenFlix Logo](src/assets/logo.png)
 
-Watch all your favourite movies, web series, TV shows and anime for free. 
+## 🚀 Features
 
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/pulkitpareek18)
+### 🎨 Premium UI/UX
+- **"Deep Space" Dark Theme**: A sophisticated immersive interface using deep blacks and neon teal/cyan accents.
+- **Glassmorphism**: Modern frosted glass effects on sidebars and interactions.
+- **Micro-Animations**: Smooth transitions, hover glows, and responsive feedback.
+- **Responsiveness**: Fully optimized for Desktop, Tablet, and Mobile devices.
 
+### 🎥 Smart Player
+- **Multi-Server Support**: Includes 5 reliable embed sources (VidSrc Pro, Embed.su, VidSrc 2, 2Embed, Smashy) to ensuring playback never fails.
+- **Secure Sandbox**: Custom security configuration to block malicious pop-ups and redirects while allowing playback.
+- **TV Series Support**: Full Season and Episode selector for managing TV shows.
+- **Deep Linking**: URL state management allows sharing exact movies or episodes (e.g., `?tv=123&s=1&e=1`).
 
+### ⚡ Performance
+- **Powered by Vite**: Blazing fast cold starts and HMR (Hot Module Replacement).
+- **Lightweight**: Built with Vanilla JS (ES Modules) - no heavy frameworks.
+- **TMDB Integration**: Fetches real-time data from The Movie Database for trending content and search.
 
-## Demo
+## 🛠️ Tech Stack
 
-https://netflix-1uh.pages.dev
+- **Core**: HTML5, CSS3 (Variables + Flex/Grid), Vanilla JavaScript (ES6+).
+- **Build Tool**: [Vite](https://vitejs.dev/).
+- **API**: [TMDB API](https://www.themoviedb.org/documentation/api) for metadata.
+- **Design**: Custom "Outfit" typography (Google Fonts) and bespoke CSS variables.
 
-## GIF
+## 📦 Installation
 
-![App GIF](https://raw.githubusercontent.com/pulkitpareek18/netflix/main/netflix-ke-pitaji.gif)
+To run OpenFlix locally:
 
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/yourusername/openflix.git
+    cd openflix
+    ```
 
-## Run Locally
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-Clone the project
+3.  **Start the development server:**
+    ```bash
+    npm run dev
+    ```
+    The app will be available at `http://localhost:5173`.
 
-```bash
-  git clone https://github.com/pulkitpareek18/netflix
-```
+4.  **Build for production:**
+    ```bash
+    npm run build
+    ```
+    The output will be in the `dist` folder.
 
-Open the project directory and run `index.html`.
+## 🛡️ Security Note
 
+OpenFlix uses third-party embed providers (like VidSrc) for streaming content. While we implement a strict **iframe sandbox** to block malicious ads and pop-ups, we strongly recommend users install a browser ad-blocker (like **uBlock Origin**) for the safest experience.
 
-## Features
+## 🤝 Contributing
 
-- Watch any movie, webseries, TV show or anime for free.
-- **Url Sharing**  
-    Despite of being a single page website built wihout any framework, you can still share url's of movies and other shows.
-- Ultra fast loading.
-- Single page website.
+Contributions are welcome! Please feel free to submit a Pull Request.
 
+1.  Fork the project.
+2.  Create your feature branch (`git checkout -b feature/AmazingFeature`).
+3.  Commit your changes (`git commit -m 'Add some AmazingFeature'`).
+4.  Push to the branch (`git push origin feature/AmazingFeature`).
+5.  Open a Pull Request.
 
+## 📄 License
 
-
-## Acknowledgements
-
-- [Pace.js](https://codebyzach.github.io/pace/e.com/project/elangosundar/awesome-README-templates)
-- IMDB
-- TMDB
-- Smashy Stream
-
-## Authors
-
-- [@pulkitpareek18](https://www.github.com/pulkitpareek18)
-
-
-## Contributing
-
-Contributions are always welcome!  
-If you have any new Idea or have found a bug, please don't hesitate to open a Pull Request.
-
-
-## License
-
-[MIT](https://github.com/pulkitpareek18/netflix/blob/main/LICENSE)
-
-
-## Support
-
-For support, email pulkitpareekofficial@gmail.com or ask any query on Twitter.
-
+Distributed under the MIT License. See `LICENSE` for more information.
