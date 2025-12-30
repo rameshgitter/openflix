@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
+    base: '/OpenFlix/', // Required for GitHub Pages
     root: './',
     publicDir: 'public',
     build: {
