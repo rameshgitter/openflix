@@ -1,4 +1,4 @@
-(function(){const n=document.createElement("link").relList;if(n&&n.supports&&n.supports("modulepreload"))return;for(const c of document.querySelectorAll('link[rel="modulepreload"]'))u(c);new MutationObserver(c=>{for(const o of c)if(o.type==="childList")for(const v of o.addedNodes)v.tagName==="LINK"&&v.rel==="modulepreload"&&u(v)}).observe(document,{childList:!0,subtree:!0});function i(c){const o={};return c.integrity&&(o.integrity=c.integrity),c.referrerPolicy&&(o.referrerPolicy=c.referrerPolicy),c.crossOrigin==="use-credentials"?o.credentials="include":c.crossOrigin==="anonymous"?o.credentials="omit":o.credentials="same-origin",o}function u(c){if(c.ep)return;c.ep=!0;const o=i(c);fetch(c.href,o)}})();const P="/assets/logo-bz4HuAEb.png",_=()=>`
+(function(){const n=document.createElement("link").relList;if(n&&n.supports&&n.supports("modulepreload"))return;for(const c of document.querySelectorAll('link[rel="modulepreload"]'))u(c);new MutationObserver(c=>{for(const o of c)if(o.type==="childList")for(const v of o.addedNodes)v.tagName==="LINK"&&v.rel==="modulepreload"&&u(v)}).observe(document,{childList:!0,subtree:!0});function i(c){const o={};return c.integrity&&(o.integrity=c.integrity),c.referrerPolicy&&(o.referrerPolicy=c.referrerPolicy),c.crossOrigin==="use-credentials"?o.credentials="include":c.crossOrigin==="anonymous"?o.credentials="omit":o.credentials="same-origin",o}function u(c){if(c.ep)return;c.ep=!0;const o=i(c);fetch(c.href,o)}})();const P="/OpenFlix/assets/logo-bz4HuAEb.png",_=()=>`
   <aside class="sidebar">
     <div class="logo-container">
         <img src="${P}" alt="OpenFlix" class="logo-img">
@@ -61,7 +61,7 @@
         </div>
     </div>
 </div>
-`,g="b6b677eb7d4ec17f700e3d4dfc31d005",b="https://api.themoviedb.org/3",E=async(t="all",n="day")=>{try{return(await(await fetch(`${b}/trending/${t}/${n}?api_key=${g}`)).json()).results}catch(i){return console.error("Error fetching trending:",i),[]}},O=async t=>{if(!t)return[];try{return(await(await fetch(`${b}/search/multi?api_key=${g}&query=${encodeURIComponent(t)}`)).json()).results}catch(n){return console.error("Error searching:",n),[]}},k=async(t,n)=>{try{return await(await fetch(`${b}/${n}/${t}?api_key=${g}&append_to_response=credits,similar`)).json()}catch(i){return console.error("Error fetching details:",i),null}},x=async(t,n)=>{try{return await(await fetch(`${b}/tv/${t}/season/${n}?api_key=${g}`)).json()}catch(i){return console.error("Error fetching season:",i),null}},U=document.querySelector("#app");let r={page:"home",query:"",currentId:null,currentType:null,currentSeason:1,currentEpisode:1,numberOfSeasons:1};const F=async()=>{U.innerHTML=`
+`,g="b6b677eb7d4ec17f700e3d4dfc31d005",b="https://api.themoviedb.org/3",E=async(t="all",n="day")=>{try{return(await(await fetch(`${b}/trending/${t}/${n}?api_key=${g}`)).json()).results}catch(i){return console.error("Error fetching trending:",i),[]}},O=async t=>{if(!t)return[];try{return(await(await fetch(`${b}/search/multi?api_key=${g}&query=${encodeURIComponent(t)}`)).json()).results}catch(n){return console.error("Error searching:",n),[]}},k=async(t,n)=>{try{return await(await fetch(`${b}/${n}/${t}?api_key=${g}&append_to_response=credits,similar`)).json()}catch(i){return console.error("Error fetching details:",i),null}},x=async(t,n)=>{try{return await(await fetch(`${b}/tv/${t}/season/${n}?api_key=${g}`)).json()}catch(i){return console.error("Error fetching season:",i),null}},F=document.querySelector("#app");let r={page:"home",query:"",currentId:null,currentType:null,currentSeason:1,currentEpisode:1,numberOfSeasons:1};const U=async()=>{F.innerHTML=`
         ${_()}
         <main class="main-content">
             ${q()}
@@ -89,4 +89,4 @@
     `},w=async()=>{const t=document.getElementById("content-area");t.innerHTML='<div class="loader">Loading Trending...</div>';const n=await E();t.innerHTML=`
         <h2>Trending Now</h2>
         ${f(n)}
-    `,r.page="home"};function C(t,n){let i;return function(...u){clearTimeout(i),i=setTimeout(()=>t.apply(this,u),n)}}F();
+    `,r.page="home"};function C(t,n){let i;return function(...u){clearTimeout(i),i=setTimeout(()=>t.apply(this,u),n)}}U();
