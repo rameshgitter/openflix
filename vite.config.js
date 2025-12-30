@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-    base: '/OpenFlix/', // Required for GitHub Pages
+    // base: '/OpenFlix/', // Removed for Vercel
     root: './',
     publicDir: 'public',
     build: {
